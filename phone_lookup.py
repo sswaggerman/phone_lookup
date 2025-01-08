@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup as htmlparser
 import requests
 
-def lookup(phone_number):
+def lookup(+542995855346):
     http = requests.get(f"https://free-lookup.net/{phone_number}")
     html = htmlparser(http.text, "html.parser")
     infos = html.findChild("ul", {"class": "report-summary__list"}).findAll("div")
